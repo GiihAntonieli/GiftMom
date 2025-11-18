@@ -1,0 +1,206 @@
+/* Importando fontes */
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@300;400&display=swap');
+
+    /* RESET GERAL */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #2c2c2c 0%, #3a3a3a 40%, #e63946 100%);
+      background-attachment: fixed;
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    /* ===== MOBILE FIRST ===== */
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      animation: fadeInDown 2s ease;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2em;
+      color: #ffcf56;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      font-size: 1em;
+      line-height: 1.6em;
+      color: #f1f1f1;
+      max-width: 90%;
+      margin-bottom: 30px;
+    }
+
+    .divider {
+      width: 50px;
+      height: 4px;
+      background: #ffcf56;
+      border-radius: 2px;
+      margin: 15px auto 25px auto;
+    }
+
+    .btn {
+      background-color: #56ccf2;
+      color: #2c2c2c;
+      border: none;
+      padding: 12px 22px;
+      font-size: 1em;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #ffcf56;
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 90%;
+      margin: 0 auto;
+      animation: fadeIn 2s ease;
+    }
+
+    section h2 {
+      font-family: 'Playfair Display', serif;
+      color: #56ccf2;
+      margin-bottom: 20px;
+      font-size: 1.6em;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: rgba(255, 255, 255, 0.05);
+      margin: 12px 0;
+      padding: 15px;
+      border-radius: 12px;
+      backdrop-filter: blur(4px);
+      font-size: 1em;
+      line-height: 1.6em;
+      border-left: 4px solid #ffcf56;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    li:hover {
+      transform: scale(1.02);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    section p {
+      font-size: 1em;
+      line-height: 1.8em;
+      color: #f8f8f8;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+
+    .heart {
+      font-size: 2em;
+      color: #ff4b5c;
+      animation: pulse 1.5s infinite;
+      margin-top: 25px;
+    }
+
+    footer {
+      padding: 25px 10px;
+      color: #c7c7c7;
+      font-size: 0.9em;
+      animation: fadeIn 3s ease;
+    }
+
+    /* ===== ANIMAÇÕES ===== */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+    }
+
+    /* ===== MEDIA QUERIES ===== */
+
+    /* Tablets (largura mínima 600px) */
+    @media (min-width: 600px) {
+      header h1 {
+        font-size: 2.5em;
+      }
+
+      header p {
+        font-size: 1.1em;
+        max-width: 600px;
+      }
+
+      section h2 {
+        font-size: 1.8em;
+      }
+
+      section p {
+        font-size: 1.1em;
+        max-width: 600px;
+      }
+
+      li {
+        font-size: 1.05em;
+      }
+    }
+
+    /* Desktops (largura mínima 992px) */
+    @media (min-width: 992px) {
+      header {
+        padding: 80px 40px;
+      }
+
+      header h1 {
+        font-size: 3em;
+      }
+
+      header p {
+        font-size: 1.2em;
+      }
+
+      section {
+        max-width: 800px;
+      }
+
+      section h2 {
+        font-size: 2em;
+      }
+
+      .btn {
+        padding: 14px 28px;
+        font-size: 1.1em;
+      }
+
+      li {
+        padding: 20px;
+      }
+    }
